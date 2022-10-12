@@ -23,7 +23,7 @@ void xuatmang(int A[], int n)
     }
 }
 
-void kiemtrapt()
+void solanxuathien()
 {
     int max = 0; 
     for (i = 0; i < n - 1 ; i++)
@@ -35,7 +35,6 @@ void kiemtrapt()
             {
                 count++;
             }
-
         }
         if (count > max)
         {
@@ -61,7 +60,7 @@ void kiemtrapt()
             m++;
         }
     }
-    printf("\nVay lan xuat hien nhieu nhat (%d) lan la: ", max);
+    printf("\nVay so lan xuat hien nhieu nhat (%d) lan la: ", max);
     xuatmang(B, m);
 }
 
@@ -70,7 +69,7 @@ int main(int argc, char const *argv[])
     nhapmang();
     printf("\nMang vua nhap la: ");
     xuatmang(A, n);
-    kiemtrapt();
+    solanxuathien();
     return 0;
 }
 
