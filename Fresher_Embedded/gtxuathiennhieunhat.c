@@ -1,6 +1,6 @@
 #include <stdio.h>
 int n, i, j;
-int A[], B[]; 
+int A[100], B[100]; 
 
 void nhapmang()
 {
@@ -19,11 +19,11 @@ void xuatmang(int A[], int n)
     //printf("Mang vua nhap la: ");
     for (i = 0; i < n; i++)
     {
-        printf("\t%d" , A[i]);
+        printf("\t%d", A[i]);
     }
 }
 
-void solanxuathien()
+void kiemtrapt()
 {
     int max = 0; 
     for (i = 0; i < n - 1 ; i++)
@@ -35,6 +35,7 @@ void solanxuathien()
             {
                 count++;
             }
+
         }
         if (count > max)
         {
@@ -60,16 +61,16 @@ void solanxuathien()
             m++;
         }
     }
-    printf("\nVay so lan xuat hien nhieu nhat (%d) lan la: ", max);
+    printf("\nVay lan xuat hien nhieu nhat (%d) lan la: ", max);
     xuatmang(B, m);
 }
 
 int main(int argc, char const *argv[])
-{
+{   
     nhapmang();
     printf("\nMang vua nhap la: ");
     xuatmang(A, n);
-    solanxuathien();
+    kiemtrapt();
     return 0;
 }
 
